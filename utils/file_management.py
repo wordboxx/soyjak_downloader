@@ -33,7 +33,3 @@ def count_local_soyjaks(directory):
     logging.info(f'Latest downloaded post id: {latest_downloaded_post_id}')
     post_id_to_download = latest_downloaded_post_id + 1
     return post_id_to_download
-
-
-create_directory(default_directory)
-count_local_soyjaks(default_directory)
