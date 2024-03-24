@@ -27,7 +27,11 @@ def get_image_info(post_id):
         return None
 
     # Get image variant
-    variant = soup.find('a', {'class': 'tag_name tag_category_variant'}).text
+    try:
+        variant = soup.find('a', {'class': 'tag_name tag_category_variant'}).text
+    except AttributeError:
+        logging.error('Failed to get image variant')
+        return None
 
     # Return the image info
     logging.info(f'Downloading from: {post_url + image_src}')
