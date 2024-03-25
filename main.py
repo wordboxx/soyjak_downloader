@@ -14,7 +14,7 @@ if __name__ == '__main__':
         maximum_soyjaks = total_soyjaks.get_max_soyjak_id()
     # If the request fails, log the error and exit
     except AttributeError:
-        logging.error('Failed to get maximum soyjak ID')
+        logging.error('Failed to get maximum soyjak ID, booru.soy may be down.')
         logging.info('Exiting...')
         exit(1)
 
