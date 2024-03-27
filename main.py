@@ -30,4 +30,5 @@ if __name__ == '__main__':
             logging.error('Failed to download image')
             logging.info('Skipping...')
         post_id += 1
+
     logging.info('All soyjaks downloaded')
