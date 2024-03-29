@@ -51,6 +51,11 @@ def download_image(src, post_id, variant, destination):
         logging.info(f'Response: {response.status_code} {response.reason}')
         logging.info('Saving image...')
 
+        # Check image filename
+        for character in variant:
+            if character.isalnum() is False:
+                variant = variant.replace(character, '')
+
         # Assign subdirectory for variant
         subdirectory = destination + f'{variant}/'
 
